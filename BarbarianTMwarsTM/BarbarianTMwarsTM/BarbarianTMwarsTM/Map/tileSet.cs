@@ -19,7 +19,7 @@ namespace BarbarianTMwarsTM.MapClasses
 
 
         bool loaded = false;
-        //infinitile is the repeating tile around the edge, also used for empty tiles
+        //infinitile is the repeating tile around the edge, also used for empty tiles      /* maar wat doen we dan als de map een kustlijn is? ik denk dat we out of bounds gewoon naar black moeten faden */
         Tile infiniTile;
         Tile[,] Tiles;
 
@@ -30,22 +30,22 @@ namespace BarbarianTMwarsTM.MapClasses
         {
             MapParent = mapParent;
             Game = mapParent.Game;
-            infiniTile = new Tile(TileType.Sea, SpriteType.Sea);
-            Tiles = new Tile[15, 11];
+            infiniTile = new Tile(TileType.Sea, SpriteType.Sea);                            /* THIJS これから voorbeeldkaart, vervangen door XML load of de constructor arguments die dezelfde data bevatten (?) */
+            Tiles = new Tile[15, 11];                                                       
             for (int i = 0; i < Tiles.GetLength(0); i++)
             {
                 for (int j = 0; j < Tiles.GetLength(1); j++)
                 {
                     Tiles[i, j] = new Tile(TileType.Sea, SpriteType.Sea);
                 }
-            }
+            }                                                                               /* THIJS これまで　voorbeeldkaart, vervangen door XML load of de constructor arguments die dezelfde data bevatten (?) */
 
         }
 
        
         public void LoadContent()
         {
-            Sea = Game.ContentManager.Load<Texture2D>("SeaNoAnim");
+            Sea = Game.ContentManager.Load<Texture2D>("Placeholders/Map/SeaNoAnim");
             Console.WriteLine("Ok made it here");
             if (Sea != null)
                 loaded = true;

@@ -60,7 +60,7 @@ namespace BarbarianTMwarsTM
             
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            arrow = this.ContentManager.Load<Texture2D>("arrow");
+            arrow = this.ContentManager.Load<Texture2D>("Placeholders/UI/arrow");
         
             base.LoadContent();
             // TODO: use this.Content to load your game content here

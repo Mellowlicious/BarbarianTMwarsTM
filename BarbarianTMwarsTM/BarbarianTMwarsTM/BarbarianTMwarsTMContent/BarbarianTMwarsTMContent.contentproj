@@ -42,15 +42,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SeaNoAnim.png">
-      <Name>SeaNoAnim</Name>
+    <Compile Include="Placeholders\UI\Arrow.png">
+      <Name>Arrow</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arrow.png">
-      <Name>Arrow</Name>
+    <Compile Include="Placeholders\Map\terrain_sea.png">
+      <Name>terrain_sea</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Placeholders\Map\terrain_plains.png">
+      <Name>terrain_plains</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Placeholders\Map\terrain_woods.png">
+      <Name>terrain_woods</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Placeholders\Map\terrain_mountain.png">
+      <Name>terrain_mountain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Placeholders\Map\SeaNoAnim.png">
+      <Name>SeaNoAnim</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
