@@ -63,8 +63,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Placeholders\Map\terrain_woods.png">
-      <Name>terrain_woods</Name>
+    <Compile Include="Placeholders\Map\terrain_forest.png">
+      <Name>terrain_forest</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

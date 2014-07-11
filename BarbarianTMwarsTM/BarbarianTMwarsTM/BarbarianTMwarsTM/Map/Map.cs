@@ -14,7 +14,7 @@ namespace BarbarianTMwarsTM.MapClasses
     class Map : DrawableGameComponent
     {
         new public BW Game;
-        TileSet tileSet;
+        public TileSet tileSet;
         public Rectangle viewPort;
         //if the mouse is outside this box, the viewport changes
         public Rectangle movementBox;

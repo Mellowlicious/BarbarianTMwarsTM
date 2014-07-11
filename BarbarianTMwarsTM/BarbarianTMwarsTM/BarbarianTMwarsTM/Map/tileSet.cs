@@ -21,7 +21,7 @@ namespace BarbarianTMwarsTM.MapClasses
         bool loaded = false;
         //infinitile is the repeating tile around the edge, also used for empty tiles      /* maar wat doen we dan als de map een kustlijn is? ik denk dat we out of bounds gewoon naar black moeten faden */
         Tile infiniTile;
-        Tile[,] Tiles;
+        public Tile[,] Tiles;
 
         //replace with library
         Texture2D Sea;

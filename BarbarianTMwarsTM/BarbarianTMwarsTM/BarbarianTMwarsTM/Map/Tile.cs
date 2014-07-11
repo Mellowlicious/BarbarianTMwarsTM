@@ -22,7 +22,7 @@ namespace BarbarianTMwarsTM.MapClasses
         }
     }
 
-    enum TileType { Sea, River, Plains, Road, Mountain, Village };
+    enum TileType { Sea, River, Plains, Road, Mountain, Forest };
     enum SpriteType { Sea };
 
 }
