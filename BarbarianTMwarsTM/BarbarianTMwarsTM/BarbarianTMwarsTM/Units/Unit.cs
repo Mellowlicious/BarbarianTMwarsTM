@@ -95,7 +95,17 @@ namespace BarbarianTMwarsTM.Units
             //What happens on a mouseclick
             if (hasMoved)
                 return;
+<<<<<<< HEAD
 
+=======
+            else
+            {
+                this.selected = true;
+                bool[,] movementPos = FindMovementPositions();
+                gameMap.moving = true;
+                gameMap.movementSquares = movementPos;
+            }
+>>>>>>> origin/master
         }
 
         public void Destroy()
@@ -126,6 +136,7 @@ namespace BarbarianTMwarsTM.Units
             //We're going to store in the workingMatrix how much of our movement allowance has been used up. 
             //We'll go through all squares in a depth-first search way.
             //For this we store a list of all possible squares to move to.
+<<<<<<< HEAD
             List<Point> DFSlist = new List<Point>();
             DFSlist.Add(Position);
             while (DFSlist.Count > 0)
@@ -133,6 +144,17 @@ namespace BarbarianTMwarsTM.Units
                 //Check all four directions (this should be done more efficiently but whatever)
                 Point currentPos = DFSlist[DFSlist.Count - 1];
 
+=======
+            Stack<Point> DFSlist = new Stack<Point>();
+            DFSlist.Push(Position);
+            
+            while (DFSlist.Count > 0)
+            {
+            
+                //Check all four directions (this should be done more efficiently but whatever)
+                Point currentPos = DFSlist.Pop();
+                
+>>>>>>> origin/master
                 List<Point> newPoss = new List<Point>();
                 newPoss.Add(new Point(currentPos.X, currentPos.Y - 1));
                 newPoss.Add( new Point(currentPos.X + 1, currentPos.Y));
@@ -140,17 +162,26 @@ namespace BarbarianTMwarsTM.Units
                 newPoss.Add(new Point(currentPos.X, currentPos.Y + 1));
                 for (int i = 0; i < newPoss.Count; i++)
                 {
+<<<<<<< HEAD
+=======
+                    
+>>>>>>> origin/master
                     //Check here if the new position is accessible by the current unit, terrain-wise. If not, quit.
                     //TODO
                     //Check here if an enemy unit is blocking the way. If so, quit.
                     if (gameMap.unitPositions[newPoss[i].X, newPoss[i].Y] != null && gameMap.unitPositions[newPoss[i].X, newPoss[i].Y].ControllingPlayer != this.ControllingPlayer)
                     {
+<<<<<<< HEAD
+=======
+                        
+>>>>>>> origin/master
                         break;
                     }
                     //Check if moving from this position is either possible or better. currently this uses 1 
                     //movement allowance for every square, later change this to use the appriopriate movement
                     //allowance from the terrain.
                     int newMovAll = workingMatrix[currentPos.X, currentPos.Y] + 1 ;
+<<<<<<< HEAD
                     if (newMovAll<= movementAllowance && newMovAll< workingMatrix[newPoss[i].X, newPoss[i].Y])
                     {
                         //Add the movement allowance and add the new position to the DFS stack
@@ -162,6 +193,31 @@ namespace BarbarianTMwarsTM.Units
                 }               
 
             }
+=======
+                    
+                    if (newMovAll<= movementAllowance)
+                    {
+                        if (workingMatrix[newPoss[i].X, newPoss[i].Y] > 0)
+                        {
+                            if (newMovAll < workingMatrix[newPoss[i].X, newPoss[i].Y])
+                            {
+                                workingMatrix[newPoss[i].X, newPoss[i].Y] = newMovAll;
+                                DFSlist.Push(newPoss[i]);
+                            }
+                        }
+                        else
+                        {
+                            //Add the movement allowance and add the new position to the DFS stack
+                            workingMatrix[newPoss[i].X, newPoss[i].Y] = newMovAll;
+                            DFSlist.Push(newPoss[i]);
+                        }
+                    }
+                   // System.Diagnostics.Debugger.Break();
+                }             
+
+            }
+
+>>>>>>> origin/master
             for (int i = 0; i < workingMatrix.GetLength(0); i++)
             {
                 for (int j = 0; j < workingMatrix.GetLength(1); j++)
