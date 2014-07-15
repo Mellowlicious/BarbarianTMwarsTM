@@ -1,0 +1,47 @@
+<MAP> 15Å~10
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+~ ~ . Y _ _ ~ _ _ . Y . . . ~ 
+~ . . Y _ Y ~ . _ . . . . . ~ 
+~ . . _ _ ~ ~ ~ _ . ^ . _ . ~ 
+~ . . _ . ~ ~ ~ _ . ^ . _ . ~ 
+~ . _ _ . ~ ~ Y _ _ _ _ _ . ~ 
+~ . . . . . . Y Y . ~ ~ ~ ~ ~ 
+~ ~ . . . . . . . . ~ ~ . . ~ 
+~ ~ ~ ~ ^ . ^ Y . . ~ . . . ~ 
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+<BUILDINGS>
+Neutral Bridge (7,2)
+Blue Barracks (12,2)
+Blue Barracks (14,2)
+Neutral Hamlet (10,3)
+Blue Castle (13,3)
+Blue Barracks (14,3)
+Neutral Hamlet (2,4)
+Neutral Hamlet (3,4)
+Blue Barracks (14,4)
+Neutral Hamlet (10,5)
+Neutral Hamlet (12,5)
+Red Barracks (2,6)
+Red Hamlet (5,6)
+Neutral Hamlet (14,6)
+Red Barracks (2,7)
+Red Castle (3,7)
+Neutral Bridge (13,7)
+Red Barracks (3,8)
+Red Barracks (4,8)
+Neutral Hamlet (6,9)
+Neutral Hamlet (9,9)
+Neutral Bridge (11,9)
+Neutral Hamlet (13,9)
+Neutral Hamlet (14,9)
+<UNITS>
+Blue Western Militia (12,2)
+Blue Western Militia (14,2)
+Blue Western Halberdier (13,3)
+Blue Western Militia (14,3)
+Blue Western Militia (14,4)
+Red Western Militia (2,6)
+Red Western Militia (2,7)
+Red Western Halberdier (3,7)
+Red Western Militia (3,8)
+Red Western Militia (4,8)

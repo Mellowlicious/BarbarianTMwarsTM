@@ -6,7 +6,7 @@ using System.Text;
 namespace BarbarianTMwarsTM.Units
 {
 
-    enum MovementType
+    public enum MovementType
     {
         Militia,
         Scout,
@@ -20,7 +20,7 @@ namespace BarbarianTMwarsTM.Units
         Sea
     }
 
-    enum UnitTypeEnum
+    public enum UnitTypeEnum
     {
         Militia,
         Archer,

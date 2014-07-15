@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using BarbarianTMwarsTM.Maps;
 namespace BarbarianTMwarsTM.Units
 {
-    class Unit
+    public class Unit
     {
         Map gameMap;
 

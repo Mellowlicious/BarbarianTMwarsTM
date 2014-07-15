@@ -6,7 +6,7 @@ using BarbarianTMwarsTM.Maps;
 
 namespace BarbarianTMwarsTM.Maps
 {
-    class Tile
+    public class Tile
     {
         public TileType tileType;
         public SpriteType spriteType;
@@ -22,7 +22,7 @@ namespace BarbarianTMwarsTM.Maps
         }
     }
 
-    enum TileType { Sea, River, Plains, Road, Mountain, Forest };
-    enum SpriteType { Sea };
+    public enum TileType { Sea, River, Plains, Road, Mountain, Forest };
+    public enum SpriteType { Sea, River, Plains, Road, Mountain, Forest }; /* WAARSCHUWING, NIET SAFE ATM. ALS IE CRASHED IS HET OMDAT IE IETS ANDERS DAN ZEE PROBEERT TE TEKENEN */
 
 }

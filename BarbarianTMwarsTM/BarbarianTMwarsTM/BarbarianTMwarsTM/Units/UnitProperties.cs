@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BarbarianTMwarsTM.Units
 {
-    class UnitProperties
+    public class UnitProperties
     {
     }
 }

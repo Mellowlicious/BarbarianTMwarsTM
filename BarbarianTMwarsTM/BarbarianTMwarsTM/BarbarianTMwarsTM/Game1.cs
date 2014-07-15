@@ -30,7 +30,7 @@ namespace BarbarianTMwarsTM
             graphics = new GraphicsDeviceManager(this);
             this.graphics.PreferredBackBufferHeight = 1080;
             this.graphics.PreferredBackBufferWidth = 1920;
-            this.graphics.IsFullScreen = true;
+            this.graphics.IsFullScreen = false;
             
             ContentManager.RootDirectory = "Content";
         }
@@ -47,7 +47,6 @@ namespace BarbarianTMwarsTM
             GameMap = new Map(this);
             this.Components.Add(GameMap);
             base.Initialize();
-
            
         }
 

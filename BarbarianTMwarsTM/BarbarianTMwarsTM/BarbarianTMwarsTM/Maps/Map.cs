@@ -12,7 +12,7 @@ using BarbarianTMwarsTM.Units;
 
 namespace BarbarianTMwarsTM.Maps
 {
-    class Map : DrawableGameComponent
+    public class Map : DrawableGameComponent
     {
         new public BW Game;
         public TileSet tileSet;
@@ -27,9 +27,9 @@ namespace BarbarianTMwarsTM.Maps
         public int amountOfPlayers;
 
 
-        Texture2D unitPlaceholder;
+        public Texture2D unitPlaceholder;
 
-        List<List<Unit>> listOfUnits; 
+        public List<List<Unit>> listOfUnits; 
         
         public Map(BW game) : base(game)
         {
@@ -66,8 +66,9 @@ namespace BarbarianTMwarsTM.Maps
             tileSet.LoadContent();
             unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
 
-            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
-            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
+            MapIOHandler.LoadGame(this, "testsave");
+            //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
+            //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
 
             AfterLoadContent();
         }
@@ -81,6 +82,7 @@ namespace BarbarianTMwarsTM.Maps
             
             //This is to test the scrolling and bounding of the map: Delete asap
             mapBox.Inflate(50, 50);
+            
         }
 
         private void BuildMapBox()

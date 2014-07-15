@@ -12,7 +12,7 @@ namespace BarbarianTMwarsTM.Maps
 {
 
 
-    class TileSet
+    public class TileSet
     {
         BW Game;
         Map MapParent;
@@ -30,7 +30,7 @@ namespace BarbarianTMwarsTM.Maps
         {
             MapParent = mapParent;
             Game = mapParent.Game;
-            infiniTile = new Tile(TileType.Sea, SpriteType.Sea);                            /* THIJS これから voorbeeldkaart, vervangen door XML load of de constructor arguments die dezelfde data bevatten (?) */
+            infiniTile = new Tile(TileType.Sea, SpriteType.Sea);                            /* THIJS これから voorbeeldkaart, vervangen door load of de constructor arguments die dezelfde data bevatten (?) */
             Tiles = new Tile[15, 11];                                                       
             for (int i = 0; i < Tiles.GetLength(0); i++)
             {
@@ -38,7 +38,7 @@ namespace BarbarianTMwarsTM.Maps
                 {
                     Tiles[i, j] = new Tile(TileType.Sea, SpriteType.Sea);
                 }
-            }                                                                               /* THIJS これまで　voorbeeldkaart, vervangen door XML load of de constructor arguments die dezelfde data bevatten (?) */
+            }                                                                               /* THIJS これまで　voorbeeldkaart, vervangen door load of de constructor arguments die dezelfde data bevatten (?) */
 
         }
 
