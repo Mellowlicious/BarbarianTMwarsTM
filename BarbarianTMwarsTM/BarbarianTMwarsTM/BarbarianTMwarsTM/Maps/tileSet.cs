@@ -6,9 +6,9 @@ using Microsoft.Xna;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
-using BarbarianTMwarsTM.MapClasses;
+using BarbarianTMwarsTM.Maps;
 
-namespace BarbarianTMwarsTM.MapClasses
+namespace BarbarianTMwarsTM.Maps
 {
 
 

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BarbarianTMwarsTM.MapClasses;
+using BarbarianTMwarsTM.Maps;
 
-namespace BarbarianTMwarsTM.MapClasses
+namespace BarbarianTMwarsTM.Maps
 {
     class Tile
     {

@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\Arrow.xnb</Output>
-      <Time>2014-07-09T15:29:49.2008315+02:00</Time>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\Arrow.xnb</Output>
+      <Time>2014-07-10T16:51:24.8730468+02:00</Time>
     </Item>
     <Item>
       <Source>Placeholders\Map\terrain_sea.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_sea.xnb</Output>
-      <Time>2014-07-09T21:49:30.3091104+02:00</Time>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_sea.xnb</Output>
+      <Time>2014-07-10T16:51:24.796875+02:00</Time>
     </Item>
     <Item>
       <Source>Placeholders\Map\terrain_plains.png</Source>
@@ -25,17 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_plains.xnb</Output>
-      <Time>2014-07-09T21:49:34.7791167+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Placeholders\Map\terrain_woods.png</Source>
-      <Name>Placeholders\Map\terrain_woods</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_woods.xnb</Output>
-      <Time>2014-07-09T21:49:37.7591208+02:00</Time>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_plains.xnb</Output>
+      <Time>2014-07-10T16:51:24.7958984+02:00</Time>
     </Item>
     <Item>
       <Source>Placeholders\Map\terrain_mountain.png</Source>
@@ -43,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_mountain.xnb</Output>
-      <Time>2014-07-09T21:49:43.8491294+02:00</Time>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_mountain.xnb</Output>
+      <Time>2014-07-10T16:51:24.7763671+02:00</Time>
     </Item>
     <Item>
       <Source>Placeholders\Map\SeaNoAnim.png</Source>
@@ -52,8 +43,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\SeaNoAnim.xnb</Output>
-      <Time>2014-07-09T21:49:55.7151619+02:00</Time>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\SeaNoAnim.xnb</Output>
+      <Time>2014-07-10T16:51:24.7480468+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Placeholders\Map\terrain_forest.png</Source>
+      <Name>Placeholders\Map\terrain_forest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_forest.xnb</Output>
+      <Time>2014-07-12T23:22:40.0283203+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -61,39 +61,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\</RootDirectory>
-      <LoggerRootDirectory>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\</RootDirectory>
+      <LoggerRootDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\</LoggerRootDirectory>
+      <IntermediateDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T12:41:18+02:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T12:41:18+02:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T12:41:18+02:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T12:41:18+02:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T12:41:18+02:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T12:41:18+02:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-07-09T18:26:12.6551414+02:00</Value>
+        <Value>2012-03-14T20:45:34.0507812+01:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
