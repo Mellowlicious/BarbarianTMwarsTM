@@ -28,8 +28,13 @@ namespace BarbarianTMwarsTM.Maps
 
 
         Texture2D unitPlaceholder;
+        Texture2D selectionCursor;
 
-        List<List<Unit>> listOfUnits; 
+        public List<List<Unit>> listOfUnits;
+
+        public Unit[,] unitPositions;
+        public bool[,] movementSquares;
+        public bool moving = false;
         
         public Map(BW game) : base(game)
         {
@@ -64,10 +69,12 @@ namespace BarbarianTMwarsTM.Maps
             Console.WriteLine("map.loadcontent");
             base.LoadContent();
             tileSet.LoadContent();
-            unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
 
-            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
-            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
+            unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
+            selectionCursor = Game.Content.Load<Texture2D>("Placeholders/UI/SelectionCursor");
+
+            //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
+            //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
 
             AfterLoadContent();
         }
@@ -76,8 +83,17 @@ namespace BarbarianTMwarsTM.Maps
         {
             BuildMapBox();
             viewPort = new Rectangle(mapBox.Center.X-(Game.Resolution.X/2), mapBox.Center.Y-(Game.Resolution.Y/2), Game.Resolution.X, Game.Resolution.Y);
-
-            
+            movementSquares = new bool[tileSet.Tiles.GetLength(0), tileSet.Tiles.GetLength(1)];
+            unitPositions = new Unit[tileSet.Tiles.GetLength(0), tileSet.Tiles.GetLength(1)];
+            for (int i = 0; i < unitPositions.GetLength(0); i++)
+            {
+                for (int j = 0; j < unitPositions.GetLength(1); j++)
+                {
+                    unitPositions[i, j] = null;
+                }
+            }
+            new Unit(this, UnitTypeEnum.Militia, unitPlaceholder, new Point(5, 4), 0, false);
+            new Unit(this, UnitTypeEnum.Militia, unitPlaceholder, new Point(5, 5), 0, true);
             
             //This is to test the scrolling and bounding of the map: Delete asap
             mapBox.Inflate(50, 50);
@@ -151,6 +167,45 @@ namespace BarbarianTMwarsTM.Maps
                 {
                     listOfUnits[i][j].Draw(gameTime);
                 }
+            }
+
+            //Draw the cursor selection if it's on the gamemap boundary
+            //Note: should be skipped if the mouse is currently over a dialog: Basically, 
+            //calculate all this in Update(), save it and then draw it here. To be done later.
+            Point mousePosition = new Point(Mouse.GetState().X, Mouse.GetState().Y);
+            Point gridPosition = GetGridPosition(mousePosition);
+            if (gridPosition.X>-1 && gridPosition.Y>-1)
+            {
+                Game.GetSpriteBatch.Draw(selectionCursor, new Rectangle((gridPosition.X) * 64 - viewPort.X, (gridPosition.Y) * 64 - viewPort.Y, 64, 64), Color.White);
+            }
+
+        }
+
+        public Point GetGridPosition(Point mousePosition)
+        {
+            //Assumes a vanilla mouseclick, no viewport offsets
+            //returns -1,-1 if out of bounds!
+            Point tempPos = new Point((mousePosition.X + viewPort.X)/64, (mousePosition.Y + viewPort.Y)/64);
+            if (tempPos.X<0||tempPos.X>= tileSet.Tiles.GetLength(0) || tempPos.Y<0 || tempPos.Y>= tileSet.Tiles.GetLength(1))
+                return new Point(-1,-1);
+            return tempPos;
+        }
+
+        public void MouseClickHandler(Point mousePosition)
+        {
+            //What happens on a mouseclick. Should handle stuff like dialogs first over
+            //map clicking. Currently only unit clicking for testing stuff.
+            Point gridPos = GetGridPosition(mousePosition);
+          //  for (int i=0;i<
+
+
+        }
+
+        public Point GridDimension
+        {
+            get
+            {
+                return new Point(tileSet.Tiles.GetLength(0), tileSet.Tiles.GetLength(1));
             }
         }
     }
