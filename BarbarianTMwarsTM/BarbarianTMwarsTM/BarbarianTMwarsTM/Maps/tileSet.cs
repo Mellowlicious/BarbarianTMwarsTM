@@ -46,7 +46,6 @@ namespace BarbarianTMwarsTM.Maps
         public void LoadContent()
         {
             Sea = Game.ContentManager.Load<Texture2D>("Placeholders/Map/SeaNoAnim");
-            Console.WriteLine("Ok made it here");
             if (Sea != null)
                 loaded = true;
         }

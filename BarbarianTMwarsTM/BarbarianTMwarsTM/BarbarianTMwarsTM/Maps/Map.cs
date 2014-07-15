@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Input;
 using BarbarianTMwarsTM.Maps;
+using BarbarianTMwarsTM.Units;
 
 namespace BarbarianTMwarsTM.Maps
 {
@@ -20,14 +21,28 @@ namespace BarbarianTMwarsTM.Maps
         public Rectangle movementBox;
         //mapBox is the total area that is scrollable on the map
         Rectangle mapBox;
-        
 
+        //Amount of factions. Every player is assigned an integer (player 1 is integer 0, player 2 is integer 1,
+        //etc). Later we assign a faction, color, CO, maybe even player name to every integer. Or use a struct or something.
+        public int amountOfPlayers;
+
+
+        Texture2D unitPlaceholder;
+
+        List<List<Unit>> listOfUnits; 
         
         public Map(BW game) : base(game)
         {
             Game = game;
             tileSet = new TileSet(this);
-            
+
+            //Amount of players should be passed to the map creation, naturally, together with other info like CO
+            amountOfPlayers=4;
+            listOfUnits = new List<List<Unit>>();
+            for (int i = 0; i < amountOfPlayers; i++)
+            {
+                listOfUnits.Add(new List<Unit>());
+            }
         }
 
         public override void Initialize()
@@ -49,6 +64,10 @@ namespace BarbarianTMwarsTM.Maps
             Console.WriteLine("map.loadcontent");
             base.LoadContent();
             tileSet.LoadContent();
+            unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
+
+            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
+            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
 
             AfterLoadContent();
         }
@@ -126,7 +145,13 @@ namespace BarbarianTMwarsTM.Maps
 
             base.Draw(gameTime);
             tileSet.Draw(gameTime);
-            
+            for (int i = 0; i < listOfUnits.Count; i++)
+            {
+                for (int j = 0; j < listOfUnits[i].Count; j++)
+                {
+                    listOfUnits[i][j].Draw(gameTime);
+                }
+            }
         }
     }
 }

@@ -55,6 +55,15 @@
       <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_forest.xnb</Output>
       <Time>2014-07-12T23:22:40.0283203+02:00</Time>
     </Item>
+    <Item>
+      <Source>Placeholders\Units\guy.png</Source>
+      <Name>Placeholders\Units\guy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Units\guy.xnb</Output>
+      <Time>2014-07-15T14:19:35.7558593+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
