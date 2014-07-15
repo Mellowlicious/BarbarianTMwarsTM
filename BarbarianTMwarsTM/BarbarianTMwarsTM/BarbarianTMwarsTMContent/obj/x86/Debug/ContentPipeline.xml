@@ -64,6 +64,24 @@
       <Output>D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Units\guy.xnb</Output>
       <Time>2014-07-15T15:45:47.3269679+02:00</Time>
     </Item>
+    <Item>
+      <Source>Placeholders\UI\SelectionCursor.png</Source>
+      <Name>Placeholders\UI\SelectionCursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\SelectionCursor.xnb</Output>
+      <Time>2014-07-15T14:48:36.0576171+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Placeholders\UI\MovementSelection.png</Source>
+      <Name>Placeholders\UI\MovementSelection</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MovementSelection.xnb</Output>
+      <Time>2014-07-15T15:27:36.0175781+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

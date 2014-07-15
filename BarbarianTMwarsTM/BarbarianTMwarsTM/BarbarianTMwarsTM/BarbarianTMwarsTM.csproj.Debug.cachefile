@@ -5,3 +5,5 @@ Content\Placeholders\Map\terrain_forest.xnb
 Content\Placeholders\Map\terrain_mountain.xnb
 Content\Placeholders\Map\SeaNoAnim.xnb
 Content\Placeholders\Units\guy.xnb
+Content\Placeholders\UI\SelectionCursor.xnb
+Content\Placeholders\UI\MovementSelection.xnb
