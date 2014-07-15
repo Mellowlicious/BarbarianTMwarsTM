@@ -22,6 +22,9 @@ namespace BarbarianTMwarsTM
         SpriteBatch spriteBatch;
         Map GameMap;
 
+        bool mouseLeftDown = false;
+        
+
         //put this in another class later
         Texture2D arrow;
 
@@ -30,7 +33,7 @@ namespace BarbarianTMwarsTM
             graphics = new GraphicsDeviceManager(this);
             this.graphics.PreferredBackBufferHeight = 1080;
             this.graphics.PreferredBackBufferWidth = 1920;
-            this.graphics.IsFullScreen = true;
+        //    this.graphics.IsFullScreen = true;
             
             ContentManager.RootDirectory = "Content";
         }
@@ -82,12 +85,24 @@ namespace BarbarianTMwarsTM
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                mouseLeftDown = true;
+            }
+            else
+            {
+                if (mouseLeftDown)
+                    GameMap.MouseClickHandler(new Point(Mouse.GetState().X, Mouse.GetState().Y));
+                mouseLeftDown = false;
+            }
+
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
+            
             // TODO: Add your update logic here
 
             base.Update(gameTime);

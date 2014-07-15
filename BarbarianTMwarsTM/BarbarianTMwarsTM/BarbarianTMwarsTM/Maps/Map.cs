@@ -29,6 +29,7 @@ namespace BarbarianTMwarsTM.Maps
 
         Texture2D unitPlaceholder;
         Texture2D selectionCursor;
+        Texture2D movementSelection;
 
         public List<List<Unit>> listOfUnits;
 
@@ -72,7 +73,7 @@ namespace BarbarianTMwarsTM.Maps
 
             unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
             selectionCursor = Game.Content.Load<Texture2D>("Placeholders/UI/SelectionCursor");
-
+            movementSelection = Game.Content.Load<Texture2D>("Placeholders/UI/MovementSelection");
             //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
             //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
 
@@ -161,6 +162,22 @@ namespace BarbarianTMwarsTM.Maps
 
             base.Draw(gameTime);
             tileSet.Draw(gameTime);
+
+            if (moving)
+            {
+                for (int i = 0; i < movementSquares.GetLength(0); i++)
+                {
+                    for (int j = 0; j < movementSquares.GetLength(1); j++)
+                    {
+                        if (movementSquares[i,j])
+                        {
+                            Game.GetSpriteBatch.Draw(movementSelection, new Rectangle(i * 64 - viewPort.X, j * 64 - viewPort.Y, 64, 64), Color.White*0.3f);
+                        }
+                    }
+                }
+            }
+
+
             for (int i = 0; i < listOfUnits.Count; i++)
             {
                 for (int j = 0; j < listOfUnits[i].Count; j++)
@@ -196,7 +213,12 @@ namespace BarbarianTMwarsTM.Maps
             //What happens on a mouseclick. Should handle stuff like dialogs first over
             //map clicking. Currently only unit clicking for testing stuff.
             Point gridPos = GetGridPosition(mousePosition);
-          //  for (int i=0;i<
+            if ( (gridPos.X>-1 && gridPos.Y>-1)&& unitPositions[gridPos.X, gridPos.Y] != null)
+            {
+                unitPositions[gridPos.X, gridPos.Y].MouseClick();
+
+
+            }
 
 
         }
