@@ -74,7 +74,8 @@ namespace BarbarianTMwarsTM.Maps
             base.LoadContent();
             tileSet.LoadContent();
 
-            //MapIOHandler.LoadGame(this, "testsave");
+            MapIOHandler.LoadGame(this, "testsave2");       //TEMP ~~ LOAD IN MAP
+            Console.WriteLine("Map Loaded succesfully");
 
             unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
             selectionCursor = Game.Content.Load<Texture2D>("Placeholders/UI/SelectionCursor");
@@ -88,16 +89,9 @@ namespace BarbarianTMwarsTM.Maps
             BuildMapBox();
             viewPort = new Rectangle(mapBox.Center.X-(Game.Resolution.X/2), mapBox.Center.Y-(Game.Resolution.Y/2), Game.Resolution.X, Game.Resolution.Y);
             movementSquares = new bool[tileSet.Tiles.GetLength(0), tileSet.Tiles.GetLength(1)];
-            unitPositions = new Unit[tileSet.Tiles.GetLength(0), tileSet.Tiles.GetLength(1)];
-            for (int i = 0; i < unitPositions.GetLength(0); i++)
-            {
-                for (int j = 0; j < unitPositions.GetLength(1); j++)
-                {
-                    unitPositions[i, j] = null;
-                }
-            }
-            new Unit(this, UnitTypeEnum.Militia, unitPlaceholder, new Point(5, 4), 0, false);
-            new Unit(this, UnitTypeEnum.Militia, unitPlaceholder, new Point(5, 5), 0, true);
+            
+            //new Unit(this, UnitTypeEnum.Militia, unitPlaceholder, new Point(5, 4), 0, false);
+            //new Unit(this, UnitTypeEnum.Militia, unitPlaceholder, new Point(5, 5), 0, true);
             
             //This is to test the scrolling and bounding of the map: Delete asap
             mapBox.Inflate(50, 50);

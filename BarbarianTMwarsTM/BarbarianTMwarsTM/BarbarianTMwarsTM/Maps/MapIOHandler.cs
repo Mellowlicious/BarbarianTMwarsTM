@@ -38,9 +38,9 @@ namespace BarbarianTMwarsTM.Maps
                 // ? = forest
                 // _ = road
 
-            for (int i = 0; i < saveMap.tileSet.Tiles.GetLength(1); i++)
+            for (int j = 0; j < saveMap.tileSet.Tiles.GetLength(1); j++)
             {
-                for (int j = 0; j < saveMap.tileSet.Tiles.GetLength(0); j++)
+                for (int i = 0; i < saveMap.tileSet.Tiles.GetLength(0); i++)
                 {
                     if (saveMap.tileSet.Tiles[i, j].tileType == TileType.Sea)
                     {
@@ -102,22 +102,33 @@ namespace BarbarianTMwarsTM.Maps
                 // ? = forest
                 // _ = road
 
-            for (int i = 0; i < map.tileSet.Tiles.GetLength(1); i++)
+            for (int j = 0; j < map.tileSet.Tiles.GetLength(1); j++)
             {
                 
                 string[] tileRow = save.ReadLine().Split();
 
-                for (int j = 0; j < map.tileSet.Tiles.GetLength(0); j++)
+                for (int i = 0; i < map.tileSet.Tiles.GetLength(0); i++)
                 {
                     Console.Write(tileRow[i]);
-                    if (tileRow[i] == "~") map.tileSet.Tiles[j, i] = new Tile(TileType.Sea, SpriteType.Sea);
-                    if (tileRow[i] == "^") map.tileSet.Tiles[j, i] = new Tile(TileType.Mountain, SpriteType.Mountain);
-                    if (tileRow[i] == ".") map.tileSet.Tiles[j, i] = new Tile(TileType.Plains, SpriteType.Plains);
-                    if (tileRow[i] == "?") map.tileSet.Tiles[j, i] = new Tile(TileType.Forest, SpriteType.Forest);
-                    if (tileRow[i] == "_") map.tileSet.Tiles[j, i] = new Tile(TileType.Road, SpriteType.Road);
+                    if (tileRow[i] == "~") map.tileSet.Tiles[i, j] = new Tile(TileType.Sea, SpriteType.Sea);
+                    if (tileRow[i] == "^") map.tileSet.Tiles[i, j] = new Tile(TileType.Mountain, SpriteType.Mountain);
+                    if (tileRow[i] == ".") map.tileSet.Tiles[i, j] = new Tile(TileType.Plains, SpriteType.Plains);
+                    if (tileRow[i] == "?") map.tileSet.Tiles[i, j] = new Tile(TileType.Forest, SpriteType.Forest);
+                    if (tileRow[i] == "_") map.tileSet.Tiles[i, j] = new Tile(TileType.Road, SpriteType.Road);
                 }
                 Console.WriteLine();
             }
+
+            //Maak de array unitpositions aan in map
+            map.unitPositions = new Unit[map.tileSet.Tiles.GetLength(0), map.tileSet.Tiles.GetLength(1)];
+            for (int j = 0; j < map.unitPositions.GetLength(1); j++)
+            {
+                for (int i = 0; i < map.unitPositions.GetLength(0); i++)
+                {
+                    map.unitPositions[i, j] = null;
+                }
+            }
+
 
             if (save.ReadLine() != "<BUILDINGS>")
                 Console.WriteLine("File Error Type 2");

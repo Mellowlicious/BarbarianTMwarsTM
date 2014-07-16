@@ -31,14 +31,14 @@ namespace BarbarianTMwarsTM.Maps
             MapParent = mapParent;
             Game = mapParent.Game;
             infiniTile = new Tile(TileType.Sea, SpriteType.Sea);                            /* THIJS これから voorbeeldkaart, vervangen door load of de constructor arguments die dezelfde data bevatten (?) */
-            Tiles = new Tile[15, 11];                                                       
-            for (int i = 0; i < Tiles.GetLength(0); i++)
-            {
-                for (int j = 0; j < Tiles.GetLength(1); j++)
-                {
-                    Tiles[i, j] = new Tile(TileType.Sea, SpriteType.Sea);
-                }
-            }                                                                               /* THIJS これまで　voorbeeldkaart, vervangen door load of de constructor arguments die dezelfde data bevatten (?) */
+            //Tiles = new Tile[15, 11];                                                       
+            //for (int i = 0; i < Tiles.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < Tiles.GetLength(1); j++)
+            //    {
+            //        Tiles[i, j] = new Tile(TileType.Sea, SpriteType.Sea);
+            //    }
+            //}                                                                               /* THIJS これまで　voorbeeldkaart, vervangen door load of de constructor arguments die dezelfde data bevatten (?) */
 
         }
 
