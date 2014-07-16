@@ -113,7 +113,7 @@ namespace BarbarianTMwarsTM.Maps
                     if (tileRow[i] == "~") map.tileSet.Tiles[i, j] = new Tile(TileType.Sea, SpriteType.Sea);
                     if (tileRow[i] == "^") map.tileSet.Tiles[i, j] = new Tile(TileType.Mountain, SpriteType.Mountain);
                     if (tileRow[i] == ".") map.tileSet.Tiles[i, j] = new Tile(TileType.Plains, SpriteType.Plains);
-                    if (tileRow[i] == "?") map.tileSet.Tiles[i, j] = new Tile(TileType.Forest, SpriteType.Forest);
+                    if (tileRow[i] == "Y") map.tileSet.Tiles[i, j] = new Tile(TileType.Forest, SpriteType.Forest);
                     if (tileRow[i] == "_") map.tileSet.Tiles[i, j] = new Tile(TileType.Road, SpriteType.Road);
                 }
                 Console.WriteLine();

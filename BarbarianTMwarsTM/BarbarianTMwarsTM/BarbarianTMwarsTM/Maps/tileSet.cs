@@ -25,6 +25,9 @@ namespace BarbarianTMwarsTM.Maps
 
         //replace with library
         Texture2D Sea;
+        Texture2D Plains;
+        Texture2D Mountain;
+        Texture2D Forest;
 
         public TileSet(Map mapParent)
         {
@@ -45,8 +48,16 @@ namespace BarbarianTMwarsTM.Maps
        
         public void LoadContent()
         {
-            Sea = Game.ContentManager.Load<Texture2D>("Placeholders/Map/SeaNoAnim");
-            if (Sea != null)
+            Sea = Game.ContentManager.Load<Texture2D>("Placeholders/Map/terrain_sea");
+            Plains = Game.ContentManager.Load<Texture2D>("Placeholders/Map/terrain_plains");
+            Mountain = Game.ContentManager.Load<Texture2D>("Placeholders/Map/terrain_mountain");
+            Forest = Game.ContentManager.Load<Texture2D>("Placeholders/Map/terrain_forest");
+            if (
+                (Sea != null)&&
+                (Mountain != null)&&
+                (Plains != null)&&
+                (Forest != null)
+                )
                 loaded = true;
         }
 
@@ -58,13 +69,41 @@ namespace BarbarianTMwarsTM.Maps
             Point offSet = new Point(-viewPort.X, -viewPort.Y);
             if (loaded)
             {
-                for (int i = 0; i < Tiles.GetLength(0); i++)
+                for (int j = 0; j < Tiles.GetLength(1); j++)
                 {
-                    for (int j = 0; j < Tiles.GetLength(1); j++)
+                    for (int i = 0; i < Tiles.GetLength(0); i++)
                     {
                         try
                         {
-                            sb.Draw(Sea, new Rectangle(offSet.X + i * spriteSize.X, offSet.Y + j * spriteSize.Y, spriteSize.X, spriteSize.Y), Color.White);
+                            switch (Tiles[i, j].spriteType)
+                            {
+                                case SpriteType.Sea:
+                                    {
+                                        sb.Draw(Sea, new Rectangle(offSet.X + i * spriteSize.X, offSet.Y + j * spriteSize.Y, spriteSize.X, spriteSize.Y), Color.White);
+                                        break;
+                                    }
+                                case SpriteType.Mountain:
+                                    {
+                                        sb.Draw(Mountain, new Rectangle(offSet.X + i * spriteSize.X, offSet.Y + j * spriteSize.Y, spriteSize.X, spriteSize.Y), Color.White);
+                                        break;
+                                    }
+                                case SpriteType.Forest:
+                                    {
+                                        sb.Draw(Forest, new Rectangle(offSet.X + i * spriteSize.X, offSet.Y + j * spriteSize.Y, spriteSize.X, spriteSize.Y), Color.White);
+                                        break;
+                                    }
+                                case SpriteType.Plains:
+                                    {
+                                        sb.Draw(Plains, new Rectangle(offSet.X + i * spriteSize.X, offSet.Y + j * spriteSize.Y, spriteSize.X, spriteSize.Y), Color.White);
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        sb.Draw(Sea, new Rectangle(offSet.X + i * spriteSize.X, offSet.Y + j * spriteSize.Y, spriteSize.X, spriteSize.Y), Color.White);
+                                        break;
+                                    }
+                            }
+                                
                         }
                         catch (Exception e)
                         {

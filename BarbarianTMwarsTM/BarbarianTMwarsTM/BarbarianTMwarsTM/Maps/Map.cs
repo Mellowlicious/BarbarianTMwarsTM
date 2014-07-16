@@ -80,7 +80,7 @@ namespace BarbarianTMwarsTM.Maps
             selectionCursor = Game.Content.Load<Texture2D>("Placeholders/UI/SelectionCursor");
             movementSelection = Game.Content.Load<Texture2D>("Placeholders/UI/MovementSelection");
 
-            MapIOHandler.LoadGame(this, "testsave2");       //TEMP ~~ LOAD IN MAP
+            MapIOHandler.LoadGame(this, "testmap");       //TEMP ~~ LOAD IN MAP
             Console.WriteLine("Map Loaded succesfully");
 
             AfterLoadContent();
