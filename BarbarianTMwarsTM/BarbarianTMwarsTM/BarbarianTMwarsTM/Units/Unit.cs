@@ -153,8 +153,11 @@ namespace BarbarianTMwarsTM.Units
                 for (int i = 0; i < newPoss.Count; i++)
                 {
 
-                    
+                    //Check here if the new position is out of bounds
+                    if (newPoss[i].X < 0 || newPoss[i].X >= gameMap.GridDimension.X || newPoss[i].Y < 0 || newPoss[i].Y >= gameMap.GridDimension.Y)
+                        break;
 
+                    
                     //Check here if the new position is accessible by the current unit, terrain-wise. If not, quit.
                     //TODO
                     //Check here if an enemy unit is blocking the way. If so, quit.
