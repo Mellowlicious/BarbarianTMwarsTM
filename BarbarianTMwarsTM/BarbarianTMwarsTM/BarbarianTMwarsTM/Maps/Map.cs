@@ -74,14 +74,14 @@ namespace BarbarianTMwarsTM.Maps
             base.LoadContent();
             tileSet.LoadContent();
 
-            MapIOHandler.LoadGame(this, "testsave");
+            //MapIOHandler.LoadGame(this, "testsave");
 
             unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
             selectionCursor = Game.Content.Load<Texture2D>("Placeholders/UI/SelectionCursor");
             movementSelection = Game.Content.Load<Texture2D>("Placeholders/UI/MovementSelection");
 
-            //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
-            //listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
+            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,4),0,false));
+            listOfUnits[0].Add(new Unit(this,UnitTypeEnum.Militia,unitPlaceholder,new Point(5,5),0,true));
 
             AfterLoadContent();
         }
