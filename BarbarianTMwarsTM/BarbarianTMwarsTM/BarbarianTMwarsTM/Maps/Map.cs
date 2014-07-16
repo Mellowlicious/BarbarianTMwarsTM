@@ -74,18 +74,22 @@ namespace BarbarianTMwarsTM.Maps
             base.LoadContent();
             tileSet.LoadContent();
 
-            MapIOHandler.LoadGame(this, "testsave2");       //TEMP ~~ LOAD IN MAP
-            Console.WriteLine("Map Loaded succesfully");
+            
 
             unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
             selectionCursor = Game.Content.Load<Texture2D>("Placeholders/UI/SelectionCursor");
             movementSelection = Game.Content.Load<Texture2D>("Placeholders/UI/MovementSelection");
+
+            MapIOHandler.LoadGame(this, "testsave2");       //TEMP ~~ LOAD IN MAP
+            Console.WriteLine("Map Loaded succesfully");
 
             AfterLoadContent();
         }
 
         private void AfterLoadContent()
         {
+            
+
             BuildMapBox();
             viewPort = new Rectangle(mapBox.Center.X-(Game.Resolution.X/2), mapBox.Center.Y-(Game.Resolution.Y/2), Game.Resolution.X, Game.Resolution.Y);
             movementSquares = new bool[tileSet.Tiles.GetLength(0), tileSet.Tiles.GetLength(1)];
@@ -95,6 +99,8 @@ namespace BarbarianTMwarsTM.Maps
             
             //This is to test the scrolling and bounding of the map: Delete asap
             mapBox.Inflate(50, 50);
+
+            
             
         }
 

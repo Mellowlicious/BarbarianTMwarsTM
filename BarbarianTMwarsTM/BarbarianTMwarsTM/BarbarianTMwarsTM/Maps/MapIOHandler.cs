@@ -129,21 +129,25 @@ namespace BarbarianTMwarsTM.Maps
                 }
             }
 
-
-            if (save.ReadLine() != "<BUILDINGS>")
+            
+            if (save.ReadLine().Equals("<BUILDINGS>"))
                 Console.WriteLine("File Error Type 2");
-            Console.WriteLine(save.ReadLine()); // temp totdat er ook echt buildings bestaan
+            else Console.WriteLine("<BUILDINGS>");
+            save.ReadLine(); // temp totdat er ook echt buildings bestaan
 
-            save.ReadLine(); // de regel <units> er uit filteren
+            Console.WriteLine(save.ReadLine()); // de regel <units> er uit filteren
 
 
             // Alle units er in zetten naar hun data zoals gesaved in SaveGame
             string[] unitData = save.ReadLine().Split();
-            while (unitData[0] != "</UNITS>")
+            while (!unitData[0].Equals("</UNITS>"))
             {
                 map.listOfUnits[0].Add(new Unit(map, UnitTypeEnum.Militia, map.unitPlaceholder, new Point(Convert.ToInt32(unitData[2]), Convert.ToInt32(unitData[3])), Convert.ToInt32(unitData[0]), false));
-                save.ReadLine();
+                unitData = save.ReadLine().Split();
             }
+
+            Console.WriteLine("Succesfully loaded file");
+            save.Close();
 
         }
     }
