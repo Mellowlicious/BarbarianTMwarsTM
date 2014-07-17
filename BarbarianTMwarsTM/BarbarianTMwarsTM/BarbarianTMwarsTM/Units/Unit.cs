@@ -35,9 +35,9 @@ namespace BarbarianTMwarsTM.Units
         
 
         //Later put this in unitproperties
-        int movementAllowance;
+        public int movementAllowance;
 
-        int[,] allowanceArray;
+        public int[,] allowanceArray;
 
         //For easy access of what kind of unit it is
         public UnitTypeEnum unitType;
