@@ -110,6 +110,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Maps\BattleInputHandlers\IInputHandler.cs" />
+    <Compile Include="Maps\BattleInputHandlers\StandardInputHandler.cs" />
+    <Compile Include="Maps\BattleInputHandlers\unitMovementInputHandler.cs" />
     <Compile Include="Maps\MapIOHandler.cs" />
     <Compile Include="Maps\Map.cs" />
     <Compile Include="Maps\Tile.cs" />

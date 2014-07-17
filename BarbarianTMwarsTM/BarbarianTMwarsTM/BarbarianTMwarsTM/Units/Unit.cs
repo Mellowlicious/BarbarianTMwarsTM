@@ -37,6 +37,8 @@ namespace BarbarianTMwarsTM.Units
         //Later put this in unitproperties
         int movementAllowance;
 
+        int[,] allowanceArray;
+
         //For easy access of what kind of unit it is
         public UnitTypeEnum unitType;
         public MovementType movementType;
@@ -89,22 +91,37 @@ namespace BarbarianTMwarsTM.Units
                 gameMap.Game.GetSpriteBatch.Draw(idleSprite, new Rectangle(xOffset, yOffset, 64, 64), Color.Gray);
 
         }
+       
 
-        public void MouseClick()
+        public void Select()
         {
-            //What happens on a mouseclick
-            if (hasMoved)
-                return;
-
-            else
-            {
-                this.selected = true;
-                bool[,] movementPos = FindMovementPositions();
-                gameMap.moving = true;
-                gameMap.movementSquares = movementPos;
-            }
-
+            this.selected = true;
+            //gameMap.selectedUnit = this;
+            bool[,] movementPos = FindMovementPositions();
+            gameMap.movementSquares = movementPos;
         }
+
+        public void Unselect()
+        {
+            this.selected = false;
+            //gameMap.selectedUnit = null;
+        }
+
+        //public void MouseClick()
+        //{
+        //    //What happens on a mouseclick
+        //    if (hasMoved)
+        //        return;
+
+        //    else
+        //    {
+        //        this.selected = true;
+        //        bool[,] movementPos = FindMovementPositions();
+        //        gameMap.moving = true;
+        //        gameMap.movementSquares = movementPos;
+        //    }
+
+        //}
 
         public void Destroy()
         {
@@ -162,9 +179,7 @@ namespace BarbarianTMwarsTM.Units
                     //TODO
                     //Check here if an enemy unit is blocking the way. If so, quit.
                     if (gameMap.unitPositions[newPoss[i].X, newPoss[i].Y] != null && gameMap.unitPositions[newPoss[i].X, newPoss[i].Y].ControllingPlayer != this.ControllingPlayer)
-                    {
-
-                        
+                    {                      
 
                         break;
                     }
@@ -205,6 +220,7 @@ namespace BarbarianTMwarsTM.Units
                 }
             }
             retVal[Position.X, Position.Y] = true;
+            allowanceArray = workingMatrix;
             return retVal;
         }
 

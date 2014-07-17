@@ -23,6 +23,7 @@ namespace BarbarianTMwarsTM
         Map GameMap;
 
         bool mouseLeftDown = false;
+        bool mouseRightDown = false;
         
 
         //put this in another class later
@@ -85,6 +86,9 @@ namespace BarbarianTMwarsTM
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+
+            Point mousePos = new Point(Mouse.GetState().X, Mouse.GetState().Y);
+            GameMap.inputHandler.MouseMove(mousePos);
             if (Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 mouseLeftDown = true;
@@ -92,8 +96,19 @@ namespace BarbarianTMwarsTM
             else
             {
                 if (mouseLeftDown)
-                    GameMap.MouseClickHandler(new Point(Mouse.GetState().X, Mouse.GetState().Y));
+                    GameMap.inputHandler.LeftMouseClick(mousePos);
                 mouseLeftDown = false;
+            }
+
+            if (Mouse.GetState().RightButton == ButtonState.Pressed)
+            {
+                mouseRightDown = true;
+            }
+            else
+            {
+                if (mouseRightDown)
+                    GameMap.inputHandler.RightMouseClick(mousePos);
+                mouseRightDown = false;
             }
 
             // Allows the game to exit

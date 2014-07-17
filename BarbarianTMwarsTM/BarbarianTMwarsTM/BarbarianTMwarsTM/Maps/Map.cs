@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Input;
 using BarbarianTMwarsTM.Maps;
 using BarbarianTMwarsTM.Units;
+using BarbarianTMwarsTM.Maps.BattleInputHandlers;
 
 namespace BarbarianTMwarsTM.Maps
 {
@@ -21,6 +22,8 @@ namespace BarbarianTMwarsTM.Maps
         public Rectangle movementBox;
         //mapBox is the total area that is scrollable on the map
         Rectangle mapBox;
+
+   
 
         //Amount of factions. Every player is assigned an integer (player 1 is integer 0, player 2 is integer 1,
         //etc). Later we assign a faction, color, CO, maybe even player name to every integer. Or use a struct or something.
@@ -35,7 +38,19 @@ namespace BarbarianTMwarsTM.Maps
 
         public Unit[,] unitPositions;
         public bool[,] movementSquares;
-        public bool moving = false;
+        public bool showMovementSquares = false;
+
+        public IInputHandler inputHandler;
+        public Point highlightedTile;
+        public bool isTileHighlighted=false;
+        public bool drawHighlightedTile = false;
+
+        public Unit selectedUnit;
+        public Unit highlightedUnit;
+        public bool isUnitHighlighted = false;
+
+        public List<Point> movementArrows;
+        public bool drawMovementArrows = false;
 
         Texture2D movementSelection;
 
@@ -43,7 +58,6 @@ namespace BarbarianTMwarsTM.Maps
         public Map(BW game) : base(game)
         {
             Game = game;
-            tileSet = new TileSet(this);
 
             //Amount of players should be passed to the map creation, naturally, together with other info like CO
             amountOfPlayers=4;
@@ -57,6 +71,8 @@ namespace BarbarianTMwarsTM.Maps
         public override void Initialize()
         {
             Console.WriteLine("map.init");
+            tileSet = new TileSet(this);
+            inputHandler = new StandardInputHandler(this);
 
             movementBox = new Rectangle(10, 10, Game.Resolution.X - 20, Game.Resolution.Y - 20);
            // viewPort = new Rectangle(-200, -200, Game.Resolution.X, Game.Resolution.Y);
@@ -167,7 +183,7 @@ namespace BarbarianTMwarsTM.Maps
             base.Draw(gameTime);
             tileSet.Draw(gameTime);
 
-            if (moving)
+            if (showMovementSquares)
             {
                 for (int i = 0; i < movementSquares.GetLength(0); i++)
                 {
@@ -191,40 +207,40 @@ namespace BarbarianTMwarsTM.Maps
             }
 
             //Draw the cursor selection if it's on the gamemap boundary
-            //Note: should be skipped if the mouse is currently over a dialog: Basically, 
-            //calculate all this in Update(), save it and then draw it here. To be done later.
-            Point mousePosition = new Point(Mouse.GetState().X, Mouse.GetState().Y);
-            Point gridPosition = GetGridPosition(mousePosition);
-            if (gridPosition.X>-1 && gridPosition.Y>-1)
-            {
-                Game.GetSpriteBatch.Draw(selectionCursor, new Rectangle((gridPosition.X) * 64 - viewPort.X, (gridPosition.Y) * 64 - viewPort.Y, 64, 64), Color.White);
-            }
 
+
+            if (drawMovementArrows)
+            {
+                for (int i = 0; i < movementArrows.Count; i++)
+                {
+                    Game.GetSpriteBatch.Draw(selectionCursor, new Rectangle((movementArrows[i].X) * 64 - viewPort.X, (movementArrows[i].Y) * 64 - viewPort.Y, 64, 64), Color.White);
+                }
+            }
+   
+            if (isTileHighlighted&&drawHighlightedTile)
+                Game.GetSpriteBatch.Draw(selectionCursor, new Rectangle((highlightedTile.X) * 64 - viewPort.X, (highlightedTile.Y) * 64 - viewPort.Y, 64, 64), Color.White);
         }
 
         public Point GetGridPosition(Point mousePosition)
         {
             //Assumes a vanilla mouseclick, no viewport offsets
             //returns -1,-1 if out of bounds!
-            Point tempPos = new Point((mousePosition.X + viewPort.X)/64, (mousePosition.Y + viewPort.Y)/64);
+            Point tempPos = new Point((int)Math.Floor(((float)mousePosition.X + (float)viewPort.X)/64f) , (int)Math.Floor(((float)mousePosition.Y + (float)viewPort.Y)/64f));
             if (tempPos.X<0||tempPos.X>= tileSet.Tiles.GetLength(0) || tempPos.Y<0 || tempPos.Y>= tileSet.Tiles.GetLength(1))
                 return new Point(-1,-1);
             return tempPos;
         }
 
-        public void MouseClickHandler(Point mousePosition)
+        public void UpdateTileHighlight(Point mousePosition)
         {
-            //What happens on a mouseclick. Should handle stuff like dialogs first over
-            //map clicking. Currently only unit clicking for testing stuff.
-            Point gridPos = GetGridPosition(mousePosition);
-
-            if ( (gridPos.X>-1 && gridPos.Y>-1)&& unitPositions[gridPos.X, gridPos.Y] != null)
+            Point gridPosition = GetGridPosition(mousePosition);
+            highlightedTile = gridPosition;
+            if (gridPosition.X >= 0 && gridPosition.Y >= 0)
             {
-                unitPositions[gridPos.X, gridPos.Y].MouseClick();
-
-
+                isTileHighlighted = true;
             }
-
+            else
+                isTileHighlighted = false;
 
         }
 
