@@ -10,7 +10,7 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
     class StandardInputHandler : IInputHandler
     {
         Map BattleMap;
-        Point oldPosition= new Point(0,0);
+        public Point oldPosition= new Point(0,0);
         public StandardInputHandler(Map battleMap)
         {
             BattleMap = battleMap;
@@ -28,17 +28,24 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
                 if (BattleMap.unitPositions[gridPos.X, gridPos.Y] != null)
                 {
                     Unit tempUnit = BattleMap.unitPositions[gridPos.X, gridPos.Y];
-                    if (!tempUnit.hasMoved)
+                    if (tempUnit.ControllingPlayer == BattleMap.activePlayer)
                     {
-                        BattleMap.selectedUnit = tempUnit;
-                        tempUnit.Select();
-                        BattleMap.showMovementSquares = true;
-                        //Change to a different input handler
-                        unitMovementInputHandler newHandler =  new unitMovementInputHandler(BattleMap);
-                        newHandler.oldPosition = this.oldPosition;
-                        BattleMap.inputHandler = newHandler;
-                        
-                    }                  
+                        if (!tempUnit.hasMoved)
+                        {
+                            BattleMap.selectedUnit = tempUnit;
+                            tempUnit.Select();
+                            BattleMap.showMovementSquares = true;
+                            //Change to a different input handler
+                            unitMovementInputHandler newHandler = new unitMovementInputHandler(BattleMap);
+                            newHandler.oldPosition = this.oldPosition;
+                            BattleMap.inputHandler = newHandler;
+
+                        }
+                    }
+                    else
+                    {
+                        //Can check enemy player movement; needs a different inputHandler?
+                    }
                 }             
             }
           

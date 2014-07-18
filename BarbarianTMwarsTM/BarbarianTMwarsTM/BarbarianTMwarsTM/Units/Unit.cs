@@ -179,9 +179,9 @@ namespace BarbarianTMwarsTM.Units
                     //TODO
                     //Check here if an enemy unit is blocking the way. If so, quit.
                     if (gameMap.unitPositions[newPoss[i].X, newPoss[i].Y] != null && gameMap.unitPositions[newPoss[i].X, newPoss[i].Y].ControllingPlayer != this.ControllingPlayer)
-                    {                      
+                    {
 
-                        break;
+                        continue;
                     }
                     //Check if moving from this position is either possible or better. currently this uses 1 
                     //movement allowance for every square, later change this to use the appriopriate movement

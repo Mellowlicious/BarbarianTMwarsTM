@@ -28,6 +28,7 @@ namespace BarbarianTMwarsTM.Maps
         //Amount of factions. Every player is assigned an integer (player 1 is integer 0, player 2 is integer 1,
         //etc). Later we assign a faction, color, CO, maybe even player name to every integer. Or use a struct or something.
         public int amountOfPlayers;
+        public int activePlayer = 0;
 
         public Texture2D unitPlaceholder;
 

@@ -23,6 +23,7 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
             BattleMap = battleMap;
             selectedUnit = BattleMap.selectedUnit;
             BattleMap.drawMovementArrows = true;
+            battleMap.drawHighlightedTile = false;
             arrowPositions = new List<Point>();
             BattleMap.movementArrows = arrowPositions;
         }
@@ -34,9 +35,17 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
             {
                 if (BattleMap.movementSquares[gridPos.X, gridPos.Y])
                 {
-                    selectedUnit.ChangePosition(gridPos);
-                    //selectedUnit.hasMoved = true;
-                    SwapToStandardInput();
+                    if (BattleMap.unitPositions[gridPos.X, gridPos.Y] != null)
+                    {
+                        //There's a unit at target location; do nothing or play error sound or something
+
+                    }
+                    else
+                    {                        
+                        selectedUnit.ChangePosition(gridPos);
+                        //selectedUnit.hasMoved = true;
+                        SwapToStandardInput();
+                    }
                 }
                 else
                 {
@@ -124,6 +133,8 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
                 }
             }
             BattleMap.movementArrows = arrowPositions;
+
+            BattleMap.UpdateTileHighlight(newPosition);
             oldPosition = newPosition;
         }
 
@@ -186,6 +197,7 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
                 newPath.Insert(0, currentPoint);
             }
             newPath.RemoveAt(0);
+            Console.WriteLine(newPath.Count);
             return newPath;
         }
 
@@ -202,7 +214,9 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
             selectedUnit.isMoving = false;
             selectedUnit.Unselect();
             BattleMap.showMovementSquares = false;
-            BattleMap.inputHandler = new StandardInputHandler(BattleMap);
+            StandardInputHandler newHandler = new StandardInputHandler(BattleMap);
+            newHandler.oldPosition = this.oldPosition;
+            BattleMap.inputHandler = newHandler;                
 
         }
     }
