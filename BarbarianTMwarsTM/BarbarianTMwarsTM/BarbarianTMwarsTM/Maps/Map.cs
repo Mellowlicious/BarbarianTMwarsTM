@@ -33,6 +33,15 @@ namespace BarbarianTMwarsTM.Maps
         public Texture2D unitPlaceholder;
 
         Texture2D selectionCursor;
+        public Texture2D menuTop;
+        public Texture2D menuFight;
+        public Texture2D menuWait;
+        public Texture2D menuClose;
+
+
+        public List<Texture2D> menuDrawOrder;
+        public bool drawMenu;
+        public Point menuStartPos;
 
 
         public List<List<Unit>> listOfUnits;
@@ -96,6 +105,12 @@ namespace BarbarianTMwarsTM.Maps
             unitPlaceholder = Game.Content.Load<Texture2D>("Placeholders/Units/guy");
             selectionCursor = Game.Content.Load<Texture2D>("Placeholders/UI/SelectionCursor");
             movementSelection = Game.Content.Load<Texture2D>("Placeholders/UI/MovementSelection");
+
+
+            menuTop = Game.Content.Load<Texture2D>("Placeholders/UI/MenuItems/workingMenuTop");
+            menuFight = Game.Content.Load<Texture2D>("Placeholders/UI/MenuItems/workingFight");
+            menuWait = Game.Content.Load<Texture2D>("Placeholders/UI/MenuItems/workingWait");
+            menuClose = Game.Content.Load<Texture2D>("Placeholders/UI/MenuItems/workingClose");
 
             MapIOHandler.LoadGame(this, "testmap");       //TEMP ~~ LOAD IN MAP
             Console.WriteLine("Map Loaded succesfully");
@@ -220,6 +235,20 @@ namespace BarbarianTMwarsTM.Maps
    
             if (isTileHighlighted&&drawHighlightedTile)
                 Game.GetSpriteBatch.Draw(selectionCursor, new Rectangle((highlightedTile.X) * 64 - viewPort.X, (highlightedTile.Y) * 64 - viewPort.Y, 64, 64), Color.White);
+
+            if (drawMenu)
+            {
+                int offset = 0;
+                Game.GetSpriteBatch.Draw(menuTop, new Rectangle(menuStartPos.X, menuStartPos.Y, 128, 15), Color.White);
+                offset += 15;
+                for (int i = 0; i < menuDrawOrder.Count; i++)
+                {
+                    Game.GetSpriteBatch.Draw(menuDrawOrder[i], new Rectangle(menuStartPos.X, menuStartPos.Y + offset, 128, 40), Color.White);
+                    offset += 40;
+                }
+                Game.GetSpriteBatch.Draw(menuTop, new Rectangle(menuStartPos.X, menuStartPos.Y + offset, 128, 15), null, Color.White, 0f, new Vector2(0, 0), SpriteEffects.FlipVertically, 0);
+
+            }
         }
 
         public Point GetGridPosition(Point mousePosition)

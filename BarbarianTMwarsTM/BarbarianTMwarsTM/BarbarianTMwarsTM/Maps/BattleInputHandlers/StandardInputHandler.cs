@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using BarbarianTMwarsTM.Units;
+using BarbarianTMwarsTM.BattleMenu;
+using BarbarianTMwarsTM.BattleMenu.StandardMenuItems;
 
 namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
 {
@@ -16,6 +18,7 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
             BattleMap = battleMap;
             BattleMap.drawHighlightedTile = true;
             BattleMap.drawMovementArrows = false;
+            battleMap.drawMenu = false;
         }
         public void LeftMouseClick(Point mousePosition)
         {
@@ -60,7 +63,10 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
         
         public void RightMouseClick(Point mousePosition)
         {
-            
+            List<IBattleMenuItem> menuItems = new List<IBattleMenuItem>();
+            menuItems.Add(new StandardMenuItemClose(BattleMap, BattleMap.menuClose));
+            StandardMenuInputHandler newHandler = new StandardMenuInputHandler(BattleMap, mousePosition, menuItems);
+            BattleMap.inputHandler = newHandler;
         }
     }
 }

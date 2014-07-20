@@ -7,3 +7,7 @@ Content\Placeholders\Map\SeaNoAnim.xnb
 Content\Placeholders\Units\guy.xnb
 Content\Placeholders\UI\SelectionCursor.xnb
 Content\Placeholders\UI\MovementSelection.xnb
+Content\Placeholders\UI\MenuItems\workingClose.xnb
+Content\Placeholders\UI\MenuItems\workingMenuTop.xnb
+Content\Placeholders\UI\MenuItems\workingFight.xnb
+Content\Placeholders\UI\MenuItems\workingWait.xnb

@@ -82,6 +82,42 @@
       <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MovementSelection.xnb</Output>
       <Time>2014-07-15T15:27:36.0175781+02:00</Time>
     </Item>
+    <Item>
+      <Source>Placeholders\UI\MenuItems\workingClose.png</Source>
+      <Name>Placeholders\UI\MenuItems\workingClose</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingClose.xnb</Output>
+      <Time>2014-07-19T22:18:22.1582031+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Placeholders\UI\MenuItems\workingMenuTop.png</Source>
+      <Name>Placeholders\UI\MenuItems\workingMenuTop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingMenuTop.xnb</Output>
+      <Time>2014-07-19T21:12:01.477539+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Placeholders\UI\MenuItems\workingFight.png</Source>
+      <Name>Placeholders\UI\MenuItems\workingFight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingFight.xnb</Output>
+      <Time>2014-07-19T21:12:28.125+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Placeholders\UI\MenuItems\workingWait.png</Source>
+      <Name>Placeholders\UI\MenuItems\workingWait</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingWait.xnb</Output>
+      <Time>2014-07-19T21:12:28.1728515+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
