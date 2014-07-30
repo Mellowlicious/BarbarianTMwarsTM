@@ -22,10 +22,9 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
         {
             BattleMap = battleMap;
             selectedUnit = BattleMap.selectedUnit;
-            BattleMap.drawMovementArrows = true;
-            battleMap.drawHighlightedTile = false;
             arrowPositions = new List<Point>();
             BattleMap.movementArrows = arrowPositions;
+            Activate();
         }
 
         public void LeftMouseClick(Point mousePosition)
@@ -218,6 +217,14 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
             newHandler.oldPosition = this.oldPosition;
             BattleMap.inputHandler = newHandler;                
 
+        }
+
+
+        public void Activate()
+        {
+            BattleMap.drawMovementArrows = true;
+            BattleMap.drawHighlightedTile = false;
+            
         }
     }
 }

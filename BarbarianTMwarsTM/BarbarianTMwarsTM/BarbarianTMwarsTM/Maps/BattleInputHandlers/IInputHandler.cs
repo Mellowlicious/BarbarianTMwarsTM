@@ -11,7 +11,8 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
 
         void LeftMouseClick(Point mousePosition);
         void RightMouseClick(Point mousePosition);
-        void MouseMove(Point newPosition);     
+        void MouseMove(Point newPosition);
+        void Activate();
 
     }
 }

@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\Arrow.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\Arrow.xnb</Output>
       <Time>2014-07-10T16:51:24.8730468+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_sea.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_sea.xnb</Output>
       <Time>2014-07-10T16:51:24.796875+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_plains.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_plains.xnb</Output>
       <Time>2014-07-10T16:51:24.7958984+02:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_forest.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_forest.xnb</Output>
       <Time>2014-07-12T23:22:40.0283203+02:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_mountain.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\terrain_mountain.xnb</Output>
       <Time>2014-07-10T16:51:24.7763671+02:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\SeaNoAnim.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Map\SeaNoAnim.xnb</Output>
       <Time>2014-07-10T16:51:24.7480468+02:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Units\guy.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\Units\guy.xnb</Output>
       <Time>2014-07-15T14:19:35.7558593+02:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\SelectionCursor.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\SelectionCursor.xnb</Output>
       <Time>2014-07-15T14:48:36.0576171+02:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MovementSelection.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MovementSelection.xnb</Output>
       <Time>2014-07-15T15:27:36.0175781+02:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingClose.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingClose.xnb</Output>
       <Time>2014-07-19T22:18:22.1582031+02:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingMenuTop.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingMenuTop.xnb</Output>
       <Time>2014-07-19T21:12:01.477539+02:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingFight.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingFight.xnb</Output>
       <Time>2014-07-19T21:12:28.125+02:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingWait.xnb</Output>
+      <Output>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\Placeholders\UI\MenuItems\workingWait.xnb</Output>
       <Time>2014-07-19T21:12:28.1728515+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -124,39 +124,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\</RootDirectory>
-      <LoggerRootDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\</LoggerRootDirectory>
-      <IntermediateDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-03-14T20:45:34.0507812+01:00</Value>
+        <Value>2014-07-30T15:48:38.1224171+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

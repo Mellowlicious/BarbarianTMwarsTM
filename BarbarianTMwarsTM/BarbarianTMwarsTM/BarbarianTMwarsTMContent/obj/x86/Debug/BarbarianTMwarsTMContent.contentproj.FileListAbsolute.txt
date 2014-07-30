@@ -1,2 +1,3 @@
 D:\Utilities\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\obj\x86\Debug\BarbarianTMwarsTMContent.contentprojResolveAssemblyReference.cache
 X:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\obj\x86\Debug\BarbarianTMwarsTMContent.contentprojResolveAssemblyReference.cache
+E:\Github\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTM\BarbarianTMwarsTMContent\obj\x86\Debug\BarbarianTMwarsTMContent.contentprojResolveAssemblyReference.cache

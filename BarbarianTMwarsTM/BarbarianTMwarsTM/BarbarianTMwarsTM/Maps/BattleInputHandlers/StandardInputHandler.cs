@@ -16,9 +16,7 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
         public StandardInputHandler(Map battleMap)
         {
             BattleMap = battleMap;
-            BattleMap.drawHighlightedTile = true;
-            BattleMap.drawMovementArrows = false;
-            battleMap.drawMenu = false;
+            Activate();
         }
         public void LeftMouseClick(Point mousePosition)
         {
@@ -63,10 +61,20 @@ namespace BarbarianTMwarsTM.Maps.BattleInputHandlers
         
         public void RightMouseClick(Point mousePosition)
         {
-            List<IBattleMenuItem> menuItems = new List<IBattleMenuItem>();
-            menuItems.Add(new StandardMenuItemClose(BattleMap, BattleMap.menuClose));
-            StandardMenuInputHandler newHandler = new StandardMenuInputHandler(BattleMap, mousePosition, menuItems);
+            List<BattleMenuItem> menuItems = new List<BattleMenuItem>();
+            menuItems.Add(new StandardMenuItemNext(BattleMap, BattleMap.menuFight));
+            menuItems.Add(new StandardMenuItemClose(BattleMap, BattleMap.menuClose));            
+            MenuContent newMenu = new MenuContent(menuItems, this);
+            StandardMenuInputHandler newHandler = new StandardMenuInputHandler(BattleMap, mousePosition, newMenu);
             BattleMap.inputHandler = newHandler;
+        }
+
+
+        public void Activate()
+        {
+            BattleMap.drawHighlightedTile = true;
+            BattleMap.drawMovementArrows = false;
+            BattleMap.drawMenu = false;
         }
     }
 }

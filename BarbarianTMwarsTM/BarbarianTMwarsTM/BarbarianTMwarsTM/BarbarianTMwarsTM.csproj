@@ -110,8 +110,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BattleMenu\IBattleMenuItem.cs" />
+    <Compile Include="BattleMenu\BattleMenuItem.cs" />
+    <Compile Include="BattleMenu\MenuContent.cs" />
     <Compile Include="BattleMenu\StandardMenuItems\StandardMenuItemClose.cs" />
+    <Compile Include="BattleMenu\StandardMenuItems\StandardMenuItemNext.cs" />
     <Compile Include="Maps\BattleInputHandlers\IInputHandler.cs" />
     <Compile Include="Maps\BattleInputHandlers\StandardInputHandler.cs" />
     <Compile Include="Maps\BattleInputHandlers\StandardMenuInputHandler.cs" />
